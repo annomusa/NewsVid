@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		FEFE215E2813222000350042 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFE215D2813222000350042 /* AppDelegate.swift */; };
 		FEFE21602813222000350042 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFE215F2813222000350042 /* SceneDelegate.swift */; };
-		FEFE21622813222000350042 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFE21612813222000350042 /* OnboardingViewController.swift */; };
+		FEFE21622813222000350042 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFE21612813222000350042 /* DashboardViewController.swift */; };
 		FEFE21672813222000350042 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEFE21662813222000350042 /* Assets.xcassets */; };
 		FEFE216A2813222000350042 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEFE21682813222000350042 /* LaunchScreen.storyboard */; };
 		FEFE21752813222100350042 /* NewsVidTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFE21742813222100350042 /* NewsVidTests.swift */; };
@@ -23,6 +23,9 @@
 		FEFE21A22813362100350042 /* NewsVid-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = FEFE21A0281332BC00350042 /* NewsVid-Bridging-Header.h */; };
 		FEFE21A4281336B500350042 /* GoogleAPIClientForREST_YouTube in Frameworks */ = {isa = PBXBuildFile; productRef = FEFE21A3281336B500350042 /* GoogleAPIClientForREST_YouTube */; };
 		FEFE21A72813D13200350042 /* YouTubeiOSPlayerHelper in Frameworks */ = {isa = PBXBuildFile; productRef = FEFE21A62813D13200350042 /* YouTubeiOSPlayerHelper */; };
+		FEFE21A92813D1ED00350042 /* YoutubeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFE21A82813D1ED00350042 /* YoutubeService.swift */; };
+		FEFE21AB2813D52800350042 /* VideoSnippetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFE21AA2813D52800350042 /* VideoSnippetView.swift */; };
+		FEFE21AD2813DCE900350042 /* AppleCake-thumb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FEFE21AC2813DCE900350042 /* AppleCake-thumb.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +49,7 @@
 		FEFE215A2813222000350042 /* NewsVid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsVid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEFE215D2813222000350042 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEFE215F2813222000350042 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FEFE21612813222000350042 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		FEFE21612813222000350042 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		FEFE21662813222000350042 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FEFE21692813222000350042 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FEFE216B2813222000350042 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -60,6 +63,9 @@
 		FEFE21912813286C00350042 /* Keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
 		FEFE21932813295600350042 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		FEFE21A0281332BC00350042 /* NewsVid-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NewsVid-Bridging-Header.h"; sourceTree = "<group>"; };
+		FEFE21A82813D1ED00350042 /* YoutubeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeService.swift; sourceTree = "<group>"; };
+		FEFE21AA2813D52800350042 /* VideoSnippetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoSnippetView.swift; sourceTree = "<group>"; };
+		FEFE21AC2813DCE900350042 /* AppleCake-thumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "AppleCake-thumb.jpg"; path = "../../../../Downloads/UpdatingCollectionViewsUsingDiffableDataSources/DiffableDataSourceSample/Resources/AppleCake-thumb.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,17 +120,20 @@
 		FEFE215C2813222000350042 /* NewsVid */ = {
 			isa = PBXGroup;
 			children = (
+				FEFE21A0281332BC00350042 /* NewsVid-Bridging-Header.h */,
+				FEFE21AC2813DCE900350042 /* AppleCake-thumb.jpg */,
+				FEFE216B2813222000350042 /* Info.plist */,
+				FEFE21912813286C00350042 /* Keys.plist */,
 				FEFE215D2813222000350042 /* AppDelegate.swift */,
+				FEFE21932813295600350042 /* Config.swift */,
+				FEFE21612813222000350042 /* DashboardViewController.swift */,
 				FEFE215F2813222000350042 /* SceneDelegate.swift */,
-				FEFE21612813222000350042 /* OnboardingViewController.swift */,
+				FEFE218F2813252500350042 /* String+Size.swift */,
+				FEFE218D281323BE00350042 /* UIView+FrameLayout.swift */,
+				FEFE21AA2813D52800350042 /* VideoSnippetView.swift */,
+				FEFE21A82813D1ED00350042 /* YoutubeService.swift */,
 				FEFE21662813222000350042 /* Assets.xcassets */,
 				FEFE21682813222000350042 /* LaunchScreen.storyboard */,
-				FEFE216B2813222000350042 /* Info.plist */,
-				FEFE218D281323BE00350042 /* UIView+FrameLayout.swift */,
-				FEFE218F2813252500350042 /* String+Size.swift */,
-				FEFE21912813286C00350042 /* Keys.plist */,
-				FEFE21932813295600350042 /* Config.swift */,
-				FEFE21A0281332BC00350042 /* NewsVid-Bridging-Header.h */,
 			);
 			path = NewsVid;
 			sourceTree = "<group>";
@@ -279,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEFE21922813286C00350042 /* Keys.plist in Resources */,
+				FEFE21AD2813DCE900350042 /* AppleCake-thumb.jpg in Resources */,
 				FEFE216A2813222000350042 /* LaunchScreen.storyboard in Resources */,
 				FEFE21672813222000350042 /* Assets.xcassets in Resources */,
 			);
@@ -306,10 +316,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEFE218E281323BE00350042 /* UIView+FrameLayout.swift in Sources */,
-				FEFE21622813222000350042 /* OnboardingViewController.swift in Sources */,
+				FEFE21622813222000350042 /* DashboardViewController.swift in Sources */,
+				FEFE21A92813D1ED00350042 /* YoutubeService.swift in Sources */,
 				FEFE21902813252500350042 /* String+Size.swift in Sources */,
 				FEFE215E2813222000350042 /* AppDelegate.swift in Sources */,
 				FEFE21602813222000350042 /* SceneDelegate.swift in Sources */,
+				FEFE21AB2813D52800350042 /* VideoSnippetView.swift in Sources */,
 				FEFE21942813295600350042 /* Config.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

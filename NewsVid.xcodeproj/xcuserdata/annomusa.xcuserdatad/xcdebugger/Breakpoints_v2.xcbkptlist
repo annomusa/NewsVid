@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "6D372A3D-7231-40F9-9569-D50A8B5DC6B4"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AC141BAB-71D3-4D66-BDBA-EAEFD2A55E98"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NewsVid/YoutubeService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "convertToVideoResult(response:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "86C0F401-CE32-4EB5-8F0D-7D4D3F4CD853"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NewsVid/YoutubeService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "convertToVideoResult(response:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "86C0F401-CE32-4EB5-8F0D-7D4D3F4CD853 - 48f9dd5e8c6ccf6b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NewsVid.YoutubeService.convertToVideoResult(response: __C.GTLRYouTube_SearchListResponse) -&gt; ()"
+                  moduleName = "NewsVid"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/annomusa/Pandora/Projects/NewsVid/NewsVid/YoutubeService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "896">
+               </Location>
+               <Location
+                  uuid = "86C0F401-CE32-4EB5-8F0D-7D4D3F4CD853 - 48f9dd5e8c6ccf6b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NewsVid.YoutubeService.convertToVideoResult(response: __C.GTLRYouTube_SearchListResponse) -&gt; ()"
+                  moduleName = "NewsVid"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/annomusa/Pandora/Projects/NewsVid/NewsVid/YoutubeService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "948">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

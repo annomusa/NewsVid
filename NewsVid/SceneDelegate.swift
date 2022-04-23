@@ -23,13 +23,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let window = UIWindow(windowScene: windowScene)
         
-        let onboarding = OnboardingViewController()
+        let onboarding = DashboardViewController()
         let navigation = UINavigationController(rootViewController: onboarding)
         
         window.rootViewController = navigation
         
         self.window = window
-        window.makeKeyAndVisible()
+        self.window?.makeKeyAndVisible()
     }
     
     func sceneDidDisconnect(_ scene: UIScene) {
