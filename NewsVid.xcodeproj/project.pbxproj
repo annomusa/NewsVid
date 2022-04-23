@@ -18,6 +18,11 @@
 		FEFE218E281323BE00350042 /* UIView+FrameLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFE218D281323BE00350042 /* UIView+FrameLayout.swift */; };
 		FEFE21902813252500350042 /* String+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFE218F2813252500350042 /* String+Size.swift */; };
 		FEFE21922813286C00350042 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = FEFE21912813286C00350042 /* Keys.plist */; };
+		FEFE21942813295600350042 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFE21932813295600350042 /* Config.swift */; };
+		FEFE219A2813302700350042 /* GoogleAPIClientForRESTCore in Frameworks */ = {isa = PBXBuildFile; productRef = FEFE21992813302700350042 /* GoogleAPIClientForRESTCore */; };
+		FEFE21A22813362100350042 /* NewsVid-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = FEFE21A0281332BC00350042 /* NewsVid-Bridging-Header.h */; };
+		FEFE21A4281336B500350042 /* GoogleAPIClientForREST_YouTube in Frameworks */ = {isa = PBXBuildFile; productRef = FEFE21A3281336B500350042 /* GoogleAPIClientForREST_YouTube */; };
+		FEFE21A72813D13200350042 /* YouTubeiOSPlayerHelper in Frameworks */ = {isa = PBXBuildFile; productRef = FEFE21A62813D13200350042 /* YouTubeiOSPlayerHelper */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +58,8 @@
 		FEFE218D281323BE00350042 /* UIView+FrameLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+FrameLayout.swift"; sourceTree = "<group>"; };
 		FEFE218F2813252500350042 /* String+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Size.swift"; sourceTree = "<group>"; };
 		FEFE21912813286C00350042 /* Keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
+		FEFE21932813295600350042 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		FEFE21A0281332BC00350042 /* NewsVid-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NewsVid-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +67,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEFE219A2813302700350042 /* GoogleAPIClientForRESTCore in Frameworks */,
+				FEFE21A4281336B500350042 /* GoogleAPIClientForREST_YouTube in Frameworks */,
+				FEFE21A72813D13200350042 /* YouTubeiOSPlayerHelper in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +97,7 @@
 				FEFE21732813222100350042 /* NewsVidTests */,
 				FEFE217D2813222100350042 /* NewsVidUITests */,
 				FEFE215B2813222000350042 /* Products */,
+				FEFE219B2813308800350042 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,6 +123,8 @@
 				FEFE218D281323BE00350042 /* UIView+FrameLayout.swift */,
 				FEFE218F2813252500350042 /* String+Size.swift */,
 				FEFE21912813286C00350042 /* Keys.plist */,
+				FEFE21932813295600350042 /* Config.swift */,
+				FEFE21A0281332BC00350042 /* NewsVid-Bridging-Header.h */,
 			);
 			path = NewsVid;
 			sourceTree = "<group>";
@@ -133,13 +146,32 @@
 			path = NewsVidUITests;
 			sourceTree = "<group>";
 		};
+		FEFE219B2813308800350042 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		FEFE21A12813361200350042 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEFE21A22813362100350042 /* NewsVid-Bridging-Header.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		FEFE21592813222000350042 /* NewsVid */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FEFE21842813222100350042 /* Build configuration list for PBXNativeTarget "NewsVid" */;
 			buildPhases = (
+				FEFE21A12813361200350042 /* Headers */,
 				FEFE21562813222000350042 /* Sources */,
 				FEFE21572813222000350042 /* Frameworks */,
 				FEFE21582813222000350042 /* Resources */,
@@ -149,6 +181,11 @@
 			dependencies = (
 			);
 			name = NewsVid;
+			packageProductDependencies = (
+				FEFE21992813302700350042 /* GoogleAPIClientForRESTCore */,
+				FEFE21A3281336B500350042 /* GoogleAPIClientForREST_YouTube */,
+				FEFE21A62813D13200350042 /* YouTubeiOSPlayerHelper */,
+			);
 			productName = NewsVid;
 			productReference = FEFE215A2813222000350042 /* NewsVid.app */;
 			productType = "com.apple.product-type.application";
@@ -221,6 +258,10 @@
 				Base,
 			);
 			mainGroup = FEFE21512813222000350042;
+			packageReferences = (
+				FEFE21982813302700350042 /* XCRemoteSwiftPackageReference "google-api-objectivec-client-for-rest" */,
+				FEFE21A52813D13200350042 /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */,
+			);
 			productRefGroup = FEFE215B2813222000350042 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -269,6 +310,7 @@
 				FEFE21902813252500350042 /* String+Size.swift in Sources */,
 				FEFE215E2813222000350042 /* AppDelegate.swift in Sources */,
 				FEFE21602813222000350042 /* SceneDelegate.swift in Sources */,
+				FEFE21942813295600350042 /* Config.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,7 +479,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 8X9HUNQK76;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"SWIFT_PACKAGE=1",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NewsVid/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -465,7 +512,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 8X9HUNQK76;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"SWIFT_PACKAGE=1\nSWIFT_PACKAGE=1",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NewsVid/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -602,6 +653,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FEFE21982813302700350042 /* XCRemoteSwiftPackageReference "google-api-objectivec-client-for-rest" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/google-api-objectivec-client-for-rest";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		FEFE21A52813D13200350042 /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/youtube/youtube-ios-player-helper";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FEFE21992813302700350042 /* GoogleAPIClientForRESTCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FEFE21982813302700350042 /* XCRemoteSwiftPackageReference "google-api-objectivec-client-for-rest" */;
+			productName = GoogleAPIClientForRESTCore;
+		};
+		FEFE21A3281336B500350042 /* GoogleAPIClientForREST_YouTube */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FEFE21982813302700350042 /* XCRemoteSwiftPackageReference "google-api-objectivec-client-for-rest" */;
+			productName = GoogleAPIClientForREST_YouTube;
+		};
+		FEFE21A62813D13200350042 /* YouTubeiOSPlayerHelper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FEFE21A52813D13200350042 /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */;
+			productName = YouTubeiOSPlayerHelper;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FEFE21522813222000350042 /* Project object */;
 }

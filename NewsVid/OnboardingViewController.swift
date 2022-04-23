@@ -5,31 +5,29 @@
 //  Created by Anno Musa on 23/04/22.
 //
 
+import Foundation
 import UIKit
+import Alamofire
+import GoogleAPIClientForREST_YouTube
 
-class OnboardingViewController: UIViewController {
-    
-    let helloLabel: UILabel = UILabel()
+class OnboardingViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .white
+        view.backgroundColor = .purple
         
-        let hello = "Onboarding Screen"
-        let font = UIFont.systemFont(ofSize: 24, weight: .bold)
-        let height = font.lineHeight
-        let width = hello.widthForHeight(height, font: font)
-        
-        helloLabel.text = hello
-        helloLabel.font = font
-        helloLabel.setW(width, andH: height)
-        helloLabel.textColor = .black
-        
-        view.addSubview(helloLabel)
-        
-        helloLabel.center(with: view)
-        
+        request()
     }
     
+    private func request() {
+        let service = GTLRYouTubeService()
+        service.apiKey = Config.instance.googleKey
+        let query = GTLRYouTubeQuery_SearchList.query(withPart: ["snippet"])
+        query.q = "ukraine"
+        query.maxResults = 25
+        service.executeQuery(query) { ticket, response, err in
+            
+        }
+    }
 }
