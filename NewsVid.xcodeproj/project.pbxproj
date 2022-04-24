@@ -24,8 +24,9 @@
 		FEFE21A4281336B500350042 /* GoogleAPIClientForREST_YouTube in Frameworks */ = {isa = PBXBuildFile; productRef = FEFE21A3281336B500350042 /* GoogleAPIClientForREST_YouTube */; };
 		FEFE21A72813D13200350042 /* YouTubeiOSPlayerHelper in Frameworks */ = {isa = PBXBuildFile; productRef = FEFE21A62813D13200350042 /* YouTubeiOSPlayerHelper */; };
 		FEFE21A92813D1ED00350042 /* YoutubeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFE21A82813D1ED00350042 /* YoutubeService.swift */; };
-		FEFE21AB2813D52800350042 /* VideoSnippetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFE21AA2813D52800350042 /* VideoSnippetView.swift */; };
+		FEFE21AB2813D52800350042 /* VideoSnippetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFE21AA2813D52800350042 /* VideoSnippetCell.swift */; };
 		FEFE21AD2813DCE900350042 /* AppleCake-thumb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FEFE21AC2813DCE900350042 /* AppleCake-thumb.jpg */; };
+		FEFE21B028159D0E00350042 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = FEFE21AF28159D0E00350042 /* SDWebImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +65,7 @@
 		FEFE21932813295600350042 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		FEFE21A0281332BC00350042 /* NewsVid-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NewsVid-Bridging-Header.h"; sourceTree = "<group>"; };
 		FEFE21A82813D1ED00350042 /* YoutubeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeService.swift; sourceTree = "<group>"; };
-		FEFE21AA2813D52800350042 /* VideoSnippetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoSnippetView.swift; sourceTree = "<group>"; };
+		FEFE21AA2813D52800350042 /* VideoSnippetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoSnippetCell.swift; sourceTree = "<group>"; };
 		FEFE21AC2813DCE900350042 /* AppleCake-thumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "AppleCake-thumb.jpg"; path = "../../../../Downloads/UpdatingCollectionViewsUsingDiffableDataSources/DiffableDataSourceSample/Resources/AppleCake-thumb.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,6 +76,7 @@
 			files = (
 				FEFE219A2813302700350042 /* GoogleAPIClientForRESTCore in Frameworks */,
 				FEFE21A4281336B500350042 /* GoogleAPIClientForREST_YouTube in Frameworks */,
+				FEFE21B028159D0E00350042 /* SDWebImage in Frameworks */,
 				FEFE21A72813D13200350042 /* YouTubeiOSPlayerHelper in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -130,7 +132,7 @@
 				FEFE215F2813222000350042 /* SceneDelegate.swift */,
 				FEFE218F2813252500350042 /* String+Size.swift */,
 				FEFE218D281323BE00350042 /* UIView+FrameLayout.swift */,
-				FEFE21AA2813D52800350042 /* VideoSnippetView.swift */,
+				FEFE21AA2813D52800350042 /* VideoSnippetCell.swift */,
 				FEFE21A82813D1ED00350042 /* YoutubeService.swift */,
 				FEFE21662813222000350042 /* Assets.xcassets */,
 				FEFE21682813222000350042 /* LaunchScreen.storyboard */,
@@ -194,6 +196,7 @@
 				FEFE21992813302700350042 /* GoogleAPIClientForRESTCore */,
 				FEFE21A3281336B500350042 /* GoogleAPIClientForREST_YouTube */,
 				FEFE21A62813D13200350042 /* YouTubeiOSPlayerHelper */,
+				FEFE21AF28159D0E00350042 /* SDWebImage */,
 			);
 			productName = NewsVid;
 			productReference = FEFE215A2813222000350042 /* NewsVid.app */;
@@ -270,6 +273,7 @@
 			packageReferences = (
 				FEFE21982813302700350042 /* XCRemoteSwiftPackageReference "google-api-objectivec-client-for-rest" */,
 				FEFE21A52813D13200350042 /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */,
+				FEFE21AE28159D0E00350042 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = FEFE215B2813222000350042 /* Products */;
 			projectDirPath = "";
@@ -321,7 +325,7 @@
 				FEFE21902813252500350042 /* String+Size.swift in Sources */,
 				FEFE215E2813222000350042 /* AppDelegate.swift in Sources */,
 				FEFE21602813222000350042 /* SceneDelegate.swift in Sources */,
-				FEFE21AB2813D52800350042 /* VideoSnippetView.swift in Sources */,
+				FEFE21AB2813D52800350042 /* VideoSnippetCell.swift in Sources */,
 				FEFE21942813295600350042 /* Config.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -683,6 +687,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		FEFE21AE28159D0E00350042 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -700,6 +712,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FEFE21A52813D13200350042 /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */;
 			productName = YouTubeiOSPlayerHelper;
+		};
+		FEFE21AF28159D0E00350042 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FEFE21AE28159D0E00350042 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

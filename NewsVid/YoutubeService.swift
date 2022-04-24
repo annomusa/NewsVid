@@ -12,13 +12,12 @@ class YoutubeService {
     
     private let key: String
     private let service: GTLRYouTubeService
+    private var nextPageToken: String?
     
     init() {
         key = Config.instance.googleKey
         service = GTLRYouTubeService()
-        
         service.apiKey = Config.instance.googleKey
-        
     }
     
     func searchVideoWith(query: String) async throws -> [VideoSearchResult] {
@@ -26,18 +25,19 @@ class YoutubeService {
             let videoQuery = GTLRYouTubeQuery_SearchList.query(withPart: ["snippet"])
             videoQuery.q = query
             videoQuery.maxResults = 25
+            if let nextPageToken = nextPageToken {
+                videoQuery.pageToken = nextPageToken
+            }
             service.executeQuery(videoQuery) { ticket, response, err in
                 let res = response as? GTLRYouTube_SearchListResponse
+                self.nextPageToken = res?.nextPageToken
                 guard let res = res else {
-                    continuation.resume(
-                        with: .failure(NSError(domain: "com.progrsv.NewsVid", code: 1001))
-                    )
+                    continuation.resume(throwing: NSError(domain: "com.progrsv.NewsVid", code: 1001))
                     return
                 }
                 let items = self.convertToVideoResult(response: res)
                 
-                continuation.resume(with: .success(items))
-                
+                continuation.resume(returning: items)
             }
         }
     }
@@ -67,7 +67,7 @@ class YoutubeService {
                     thumbnails: thumbnailURL,
                     thumbnailsWidth: UInt(truncating: thumbnailObj.width ?? 0),
                     title: title,
-                    description: desc
+                    desc: desc
                 )
             )
         }
@@ -84,6 +84,6 @@ struct VideoSearchResult: Identifiable, Hashable {
     let thumbnails: URL
     let thumbnailsWidth: UInt?
     let title: String
-    let description: String
+    let desc: String
     
 }
